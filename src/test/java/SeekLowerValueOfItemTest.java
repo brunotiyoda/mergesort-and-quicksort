@@ -38,7 +38,7 @@ public class SeekLowerValueOfItemTest {
 
     @Test
     void then_seekLowerPriceOfItemChangePosition3() {
-        Integer itemPosition = SeekLowerValueOfItem.seekLowerPriceOfItem(items, 6, items.length);
+        Integer itemPosition = SeekLowerValueOfItem.seekLowerPriceOfItem(items, 3, items.length);
 
         assertEquals(itemPosition, items[4].getPosition());
     }
