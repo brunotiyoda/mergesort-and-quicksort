@@ -1,5 +1,6 @@
 import br.com.sorts.Item;
 import br.com.sorts.SeekLowerValueOfItem;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,8 +38,16 @@ public class SeekLowerValueOfItemTest {
 
     @Test
     void then_seekLowerPriceOfItemChangePosition3() {
-        Integer itemPosition = SeekLowerValueOfItem.seekLowerPriceOfItem(items, 3, items.length);
+        Integer itemPosition = SeekLowerValueOfItem.seekLowerPriceOfItem(items, 6, items.length);
 
         assertEquals(itemPosition, items[4].getPosition());
     }
+
+    @Test
+    void then_fail() {
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            SeekLowerValueOfItem.seekLowerPriceOfItem(items, 5, null);
+        });
+    }
+
 }
