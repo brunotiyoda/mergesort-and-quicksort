@@ -1,4 +1,4 @@
-# Implementation of SelectionSort and InsertionSort in Java
+# Implementation of Selection Sort and Insertion Sort in Java
 
 ## Tecnologies
 * Java 14
