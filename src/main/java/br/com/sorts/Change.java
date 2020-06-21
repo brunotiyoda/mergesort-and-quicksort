@@ -2,7 +2,7 @@ package br.com.sorts;
 
 public class Change {
 
-    public Change() {
+    private Change() {
         throw new IllegalStateException("Utility class");
     }
 
